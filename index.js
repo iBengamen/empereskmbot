@@ -119,13 +119,15 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
             var respDay = D.getDate() + newResp;
             D.setDate(respDay);
 
-            boss = new Object();
+            /*boss = new Object();
             boss.data = new Object();
             boss.data =  NormalnumData(D.getDate())+'.'+NormalnumData(D.getMonth()+1)+'.'+D.getFullYear();  
             boss.day = new Object();
             boss.day = NormalDay(D.getDay()); 
             boss.nBoss = new Object();
-            boss.nBoss = nameBoss;
+            boss.nBoss = nameBoss;*/
+            boss = '';
+            boss += NormalnumData(D.getDate())+'.'+NormalnumData(D.getMonth()+1)+'.'+D.getFullYear();
           }
       }
    }

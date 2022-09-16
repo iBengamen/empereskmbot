@@ -287,14 +287,14 @@ bot.on('message', msg => {
       bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
       
       //console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
-      console.log(Object(checkBossResp('Убит босс Beleth',5, 'Белеф',feed)).nBoss);
+      console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
 
       console.log();
     }  
     
 })
 //ентерфрейм
-setInterval(onEnterFrame, 1000, 1);
+//setInterval(onEnterFrame, 1000, 1);
 
 
 /*PS E:\HTML5\telegram_bot> git remote add origin https://github.com/iBengamen/empereskmbot.git

@@ -45,9 +45,9 @@ function onEnterFrame()
 
     var currentTime = Hh + ':' + Mm;
     //вкажемо час коли показувати повідомлення
-    const timeToShowInfo = '0:33';
-    const timeToShowReminder = '0:40';
-    const timeToLoadRSS = '0:35';
+    const timeToShowInfo = '0:40';
+    const timeToShowReminder = '0:45';
+    const timeToLoadRSS = '0:38';
 
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
     if(currentTime == timeToShowInfo)
@@ -269,9 +269,14 @@ bot.on('message', msg => {
     console.log(chatId);
     if(text == firstStart)
     {
-      bot.sendMessage(chatId,'Стартуем не очкуй',{parse_mode:'Markdown'});
+      bot.sendMessage(chatId,'Наваливаем боком',{parse_mode:'Markdown'});
     }  
     
 })
 //ентерфрейм
 setInterval(onEnterFrame, 1000, 1);
+
+
+/*PS E:\HTML5\telegram_bot> git remote add origin https://github.com/iBengamen/empereskmbot.git
+fatal: remote origin already exists.
+PS E:\HTML5\telegram_bot> git push origin master*/

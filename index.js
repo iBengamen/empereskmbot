@@ -277,7 +277,9 @@ bot.on('message', msg => {
 
       var sTime = Hh + ':' + Mm;
 
-      bot.sendMessage(chatId,'Тестируем время - '+sTime,{parse_mode:'Markdown'});
+      //bot.sendMessage(chatId,/,{parse_mode:'Markdown'});
+      var fmsg = checkKMforFuture();
+      bot.sendMessage(chatId,fmsg,{parse_mode:'Markdown'});
     }  
     
 })

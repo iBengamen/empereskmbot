@@ -40,12 +40,12 @@ function onEnterFrame()
   var today = new Date();
  
     // получаем дату и время
-    var Hh = today.getHours()+3;//часовой пояс +3
+    var Hh = today.getHours();//часовой пояс +3
     var Mm = today.getMinutes();
 
     var currentTime = Hh + ':' + Mm;
     //вкажемо час коли показувати повідомлення
-    const timeToShowInfo = '0:55';
+    const timeToShowInfo = '21:58';
     const timeToShowReminder = '0:58';
     const timeToLoadRSS = '0:52';
 

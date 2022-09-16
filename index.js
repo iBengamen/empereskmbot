@@ -279,17 +279,7 @@ bot.on('message', msg => {
     if(text == firstStart)
     {
       bot.sendMessage(chatId,'Приветствую мой юный падаван',{parse_mode:'Markdown'});
-    }
-
-    /*function dni() {
-        var D = new Date(1999,11,31);
-        D.setDate(D.getDate() + 3);
-        alert(D);
-      }*/
-
-    //bot.sendMessage(chatId,'Ти мені написав ' + text)
-   
-    
+    }  
     
 })
 

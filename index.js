@@ -282,6 +282,7 @@ bot.on('message', msg => {
       bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
 
       console.log(fmsg);
+      console.log(feed);
     }  
     
 })

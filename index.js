@@ -132,7 +132,7 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
           }
       }
    }
-
+   console.log('консоль блядь работа');
    return boss;
 }
 

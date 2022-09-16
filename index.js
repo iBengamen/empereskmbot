@@ -280,8 +280,12 @@ bot.on('message', msg => {
       //bot.sendMessage(chatId,/,{parse_mode:'Markdown'});
       var fmsg = checkKMforFuture();
       bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
-      
-      console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
+      function checkBossRes()
+      {
+        return 'тратата тратата сірі яйця у кота'
+      }
+      //console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
+      console.log(checkBossRes());
 
       console.log();
     }  

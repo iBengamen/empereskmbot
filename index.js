@@ -127,6 +127,7 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
             boss.nBoss = new Object();
             boss.nBoss = nameBoss;*/
             boss = 'шо за блядство';
+            console.log('буде блядина чи ні?');
             //boss += NormalnumData(D.getDate())+'.'+NormalnumData(D.getMonth()+1)+'.'+D.getFullYear();
           }
       }

@@ -112,7 +112,7 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
   for (var index = 0; index < feedXML.items.length; index++) {     
       if (feedXML.items[index].title == findNameBoss)
       {
-          if (!findBoss)
+          if (findBoss == false)
           {
             findBoss = true;
             var D = new Date(feedXML.items[index].pubDate);

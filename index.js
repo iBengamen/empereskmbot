@@ -280,8 +280,10 @@ bot.on('message', msg => {
       //bot.sendMessage(chatId,/,{parse_mode:'Markdown'});
       var fmsg = checkKMforFuture();
       bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
+      
+      console.log(checkBossResp('Убит босс Beleth',5, 'Белеф'));
 
-      console.log(feed.items[1].title);
+      console.log();
     }  
     
 })

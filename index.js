@@ -269,7 +269,15 @@ bot.on('message', msg => {
     console.log(chatId);
     if(text == firstStart)
     {
-      bot.sendMessage(chatId,'Наваливаем боком',{parse_mode:'Markdown'});
+      var serverTime = new Date();
+ 
+      // получаем дату и время
+      var Hh = serverTime.getHours();
+      var Mm = serverTime.getMinutes();
+
+      var sTime = Hh + ':' + Mm;
+
+      bot.sendMessage(chatId,'Тестируем время - '+sTime,{parse_mode:'Markdown'});
     }  
     
 })

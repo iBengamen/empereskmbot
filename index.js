@@ -279,7 +279,9 @@ bot.on('message', msg => {
 
       //bot.sendMessage(chatId,/,{parse_mode:'Markdown'});
       var fmsg = checkKMforFuture();
-      bot.sendMessage(chatId,feed,{parse_mode:'Markdown'});
+      bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
+
+      console.log(feed);
     }  
     
 })

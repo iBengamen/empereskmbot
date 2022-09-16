@@ -281,7 +281,7 @@ bot.on('message', msg => {
       var fmsg = checkKMforFuture();
       bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
       
-      console.log(checkBossResp('Убит босс Beleth',5, 'Белеф'));
+      console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
 
       console.log();
     }  

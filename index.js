@@ -258,6 +258,18 @@ function checkKMforFuture()
       return sndMsg;
 }
 
+function checkBossRes()
+      {
+            var boss = new Object();
+            boss.data = new Object();
+            boss.data =  'тратата';  
+            boss.day = new Object();
+            boss.day = 'сірі яйця'
+            boss.nBoss = new Object();
+            boss.nBoss = 'у кота';
+        return boss;
+      }
+
 bot.on('message', msg => {
     
     const text = msg.text;
@@ -280,17 +292,7 @@ bot.on('message', msg => {
       //bot.sendMessage(chatId,/,{parse_mode:'Markdown'});
       var fmsg = checkKMforFuture();
       bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
-      function checkBossRes()
-      {
-            var boss = new Object();
-            boss.data = new Object();
-            boss.data =  'тратата';  
-            boss.day = new Object();
-            boss.day = 'сірі яйця'
-            boss.nBoss = new Object();
-            boss.nBoss = 'у кота';
-        return boss;
-      }
+      
       //console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
       console.log(checkBossRes());
 

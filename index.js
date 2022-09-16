@@ -18,25 +18,16 @@ var kmToday;
 async function loadXMLBoss()
 {
    feed = await parser.parseURL('https://asterios.tm/index.php?cmd=rss&serv=0&filter=epic&count=100&out=xml');
-   /*feed.items.forEach(item => {
-    console.log(item.title + ':' + item.pubDate)
-  });*/
 }
 
 async function loadXMLSiege()
 {
   feedSiege = await parser.parseURL('https://asterios.tm/index.php?cmd=rss&serv=0&filter=siege&out=xml');
-   /*feed.items.forEach(item => {
-    console.log(item.title + ':' + item.pubDate)
-  });*/
 }
 
 async function loadXMLTW()
 {
   feedTW = await parser.parseURL('https://asterios.tm/index.php?cmd=rss&serv=0&filter=tw&out=xml');
-   /*feed.items.forEach(item => {
-    console.log(item.title + ':' + item.pubDate)
-  });*/
 }
 
 

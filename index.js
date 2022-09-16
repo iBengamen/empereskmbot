@@ -108,7 +108,7 @@ function NormalDay(num)
 function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
 {
   var findBoss = false;
-  var boss = '';
+  var boss = 'блядину неприсвоїло';
   for (var index = 0; index < feedXML.items.length; index++) {     
       if (feedXML.items[index].title == findNameBoss)
       {
@@ -126,7 +126,7 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
             boss.day = NormalDay(D.getDay()); 
             boss.nBoss = new Object();
             boss.nBoss = nameBoss;*/
-            boss = 'шо за блядство';
+            boss = 'блядство заработало';
             console.log('буде блядина чи ні?');
             //boss += NormalnumData(D.getDate())+'.'+NormalnumData(D.getMonth()+1)+'.'+D.getFullYear();
           }

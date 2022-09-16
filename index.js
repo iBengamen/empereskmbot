@@ -109,13 +109,13 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
 {
   var findBoss = false;
   var boss = 'блядину неприсвоїло';
-  for (var index = 0; index < feedXML.items.length; index++) {     
-      if (feedXML.items[index].title == findNameBoss)
+  for (var indx = 0; indx < feedXML.items.length; indx++) {     
+      if (feedXML.items[indx].title == findNameBoss)
       {
           if (findBoss == false)
           {
             findBoss = true;
-            var D = new Date(feedXML.items[index].pubDate);
+            var D = new Date(feedXML.items[indx].pubDate);
             var respDay = D.getDate() + newResp;
             D.setDate(respDay);
 

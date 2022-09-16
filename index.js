@@ -108,7 +108,7 @@ function NormalDay(num)
 function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
 {
   var findBoss = false;
-  var boss = Object;
+  var boss = '';
   for (var index = 0; index < feedXML.items.length; index++) {     
       if (feedXML.items[index].title == findNameBoss)
       {

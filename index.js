@@ -284,7 +284,7 @@ bot.on('message', msg => {
       bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
       
       //console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
-      console.log(fmsg);
+      console.log(Object(checkBossResp('Убит босс Beleth',5, 'Белеф',feed)));
 
       console.log();
     }  

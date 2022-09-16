@@ -282,7 +282,14 @@ bot.on('message', msg => {
       bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
       function checkBossRes()
       {
-        return 'тратата тратата сірі яйця у кота'
+            var boss = new Object();
+            boss.data = new Object();
+            boss.data =  'тратата';  
+            boss.day = new Object();
+            boss.day = 'сірі яйця'
+            boss.nBoss = new Object();
+            boss.nBoss = 'у кота';
+        return boss;
       }
       //console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
       console.log(checkBossRes());

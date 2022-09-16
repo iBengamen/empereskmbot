@@ -45,9 +45,9 @@ function onEnterFrame()
 
     var currentTime = Hh + ':' + Mm;
     //вкажемо час коли показувати повідомлення
-    const timeToShowInfo = '22:15';
-    const timeToShowReminder = '22:21';
-    const timeToLoadRSS = '22:13';
+    const timeToShowInfo = '0:33';
+    const timeToShowReminder = '0:40';
+    const timeToLoadRSS = '0:35';
 
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
     if(currentTime == timeToShowInfo)
@@ -269,7 +269,7 @@ bot.on('message', msg => {
     console.log(chatId);
     if(text == firstStart)
     {
-      bot.sendMessage(chatId,'Приветствую бот работает в штатном режиме',{parse_mode:'Markdown'});
+      bot.sendMessage(chatId,'Стартуем не очкуй',{parse_mode:'Markdown'});
     }  
     
 })

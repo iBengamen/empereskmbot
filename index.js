@@ -273,5 +273,5 @@ bot.on('message', msg => {
     }  
     
 })
-
+//ентерфрейм
 setInterval(onEnterFrame, 1000, 1);

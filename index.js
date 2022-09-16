@@ -269,7 +269,7 @@ bot.on('message', msg => {
     console.log(chatId);
     if(text == firstStart)
     {
-      bot.sendMessage(chatId,'Приветствую мой юный падаван',{parse_mode:'Markdown'});
+      bot.sendMessage(chatId,'Приветствую бот работает в штатном режиме',{parse_mode:'Markdown'});
     }  
     
 })

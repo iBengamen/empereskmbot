@@ -126,8 +126,8 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
             boss.day = NormalDay(D.getDay()); 
             boss.nBoss = new Object();
             boss.nBoss = nameBoss;*/
-            boss = '';
-            boss += NormalnumData(D.getDate())+'.'+NormalnumData(D.getMonth()+1)+'.'+D.getFullYear();
+            boss = 'шо за блядство';
+            //boss += NormalnumData(D.getDate())+'.'+NormalnumData(D.getMonth()+1)+'.'+D.getFullYear();
           }
       }
    }

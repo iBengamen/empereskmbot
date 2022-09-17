@@ -111,7 +111,7 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
   var boss = 'блядину неприсвоїло';
   
   for (var indx = 0; indx < feedXML.items.length; indx++) {  
-      console.log(feedSiege.items[indx].title);
+      console.log(feedTW.items[indx].title);
       if (feedXML.items[indx].title == findNameBoss)
       {
         console.log('шось блядь найшли');
@@ -242,10 +242,10 @@ function checkKMforFuture()
       arrKM.push(new Object(checkBossResp('Boss Valakas was killed',16, 'Валакас')));
       arrKM.push(new Object(checkBossResp('Boss Valakas was killed',24, 'Валакас')));
 
-      arrKM.push(new Object(checkBossResp('Закончилась осада замка Rune',14, 'Осады, начало 18.00',feedSiege)));
+      arrKM.push(new Object(checkBossResp('The siege of Rune has ended',14, 'Осады, начало 18.00',feedSiege)));
       arrKM.push(new Object(checkBossResp('Закончились битвы за земли',14, 'Битвы за земли, начало 20.00',feedTW)));
 
-      arrKM.push(new Object(checkBossResp('Закончилась осада замка Rune',28, 'Осады, начало 18.00',feedSiege)));
+      arrKM.push(new Object(checkBossResp('The siege of Rune has ended',28, 'Осады, начало 18.00',feedSiege)));
       arrKM.push(new Object(checkBossResp('Закончились битвы за земли',28, 'Битвы за земли, начало 20.00',feedTW)));
 
       kmToday = sortArray(arrKM);
@@ -294,7 +294,7 @@ bot.on('message', msg => {
     
 })
 //ентерфрейм
-//setInterval(onEnterFrame, 1000, 1);
+setInterval(onEnterFrame, 1000, 1);
 
 
 /*PS E:\HTML5\telegram_bot> git remote add origin https://github.com/iBengamen/empereskmbot.git

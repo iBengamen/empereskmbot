@@ -109,8 +109,9 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
 {
   var findBoss = false;
   var boss = 'блядину неприсвоїло';
-  console.log(feedXML);
-  for (var indx = 0; indx < feedXML.items.length; indx++) {     
+  
+  for (var indx = 0; indx < feedXML.items.length; indx++) {  
+    console.log('процес пішов...');   
       if (feedXML.items[indx].title == findNameBoss)
       {
           if (findBoss == false)

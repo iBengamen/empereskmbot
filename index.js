@@ -109,6 +109,7 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
 {
   var findBoss = false;
   var boss = 'блядину неприсвоїло';
+  console.log(feedXML);
   for (var indx = 0; indx < feedXML.items.length; indx++) {     
       if (feedXML.items[indx].title == findNameBoss)
       {
@@ -127,7 +128,7 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
             boss.nBoss = new Object();
             boss.nBoss = nameBoss;*/
             boss = 'блядство заработало';
-            console.log('буде блядина чи ні?');
+            
             //boss += NormalnumData(D.getDate())+'.'+NormalnumData(D.getMonth()+1)+'.'+D.getFullYear();
           }
       }

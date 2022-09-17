@@ -49,13 +49,14 @@ function onEnterFrame()
     const timeToShowInfo = '6:0';
     const timeToShowReminder = '13:0';
     
+    const chatGroup = '-1001629835772';
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
     if(currentTime == timeToShowInfo)
     {
         if(!showMessage)
         {
-          var fmsg = checkKMforFuture();
-          bot.sendMessage(-791631671,fmsg,{parse_mode:'Markdown'});
+          var fmsg = checkKMforFuture(7);
+          bot.sendMessage(chatGroup,fmsg,{parse_mode:'Markdown'});
           showMessage = true;
         }
     }
@@ -65,11 +66,11 @@ function onEnterFrame()
         {
           if(kmToday == null)
           {
-            checkKMforFuture();
+            checkKMforFuture(7);
           }
 
           var fmsg = '*Напоминаю, что сегодня у нас:* \n'+ kmToday;
-          bot.sendMessage(-791631671,fmsg,{parse_mode:'Markdown'});
+          bot.sendMessage(chatGroup,fmsg,{parse_mode:'Markdown'});
           showMessage = true;
         }
       }
@@ -203,16 +204,26 @@ function sortArray(arr)
   return txtToday;
 }
 
-function arrToStr(arr)
+function arrToStr(arr,days=30)
 {
   var txt = '';
   arr.forEach(element => {
-    txt += ('*' + element.data +'* _'+ element.day +' '+ element.nBoss +'_\n')
+    //проверяем дату которую задали для показа сообщения
+    var mirrordataYear1 = String(element.data)[6]+String(element.data)[7]+String(element.data)[8]+String(element.data)[9];
+    var mirrordataMonth1 = String(element.data)[3]+String(element.data)[4];
+    var mirrordataDay1 = String(element.data)[0]+String(element.data)[1];
+    var aData = new Date(mirrordataYear1,mirrordataMonth1,mirrordataDay1);
+    var dateToday = new Date();
+    dateToday.setDate(dateToday.getDate()+days);
+    if(aData<=dateToday)
+    {
+      txt += ('*' + element.data +'* _'+ element.day +' '+ element.nBoss +'_\n')
+    }
   });
   return txt;
 }
 
-function checkKMforFuture()
+function checkKMforFuture(days = 30)
 {
   var arrKM = new Array();
 
@@ -252,7 +263,7 @@ function checkKMforFuture()
       
      
       var sndMsg = '*Расписание КМ на ближайшие 30 дней:* \n'; 
-      sndMsg += arrToStr(arrKM); 
+      sndMsg += arrToStr(arrKM, days); 
       sndMsg += '\n \n'+'*Сегодня у нас:* \n'+ kmToday;
 
       return sndMsg;
@@ -267,20 +278,18 @@ bot.on('message', msg => {
     const chatId = msg.chat.id;
 
     const firstStart = '/start'
+    const showAllKM = '/КМ'
 
     console.log(chatId);
+
     if(text == firstStart)
     {
-      var serverTime = new Date();
- 
-      // получаем дату и время
-      var Hh = serverTime.getHours();
-      var Mm = serverTime.getMinutes();
-
-      var sTime = Hh + ':' + Mm;
-
       
-      var fmsg = checkKMforFuture();
+    }
+
+    if(text == showAllKM)
+    {
+      var fmsg = checkKMforFuture(7);
       bot.sendMessage(chatId,fmsg,{parse_mode:'Markdown'});
     }  
     

@@ -45,9 +45,9 @@ function onEnterFrame()
 
     var currentTime = Hh + ':' + Mm;
     //вкажемо час коли показувати повідомлення
-    const timeToLoadRSS = '0:32';
-    const timeToShowInfo = '0:34';
-    const timeToShowReminder = '0:36';
+    const timeToLoadRSS = '5:55';
+    const timeToShowInfo = '6:0';
+    const timeToShowReminder = '1:0';
     
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
     if(currentTime == timeToShowInfo)
@@ -111,10 +111,8 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
   var boss;
   
   for (var indx = 0; indx < feedXML.items.length; indx++) {  
-      console.log(feedTW.items[indx].title);
       if (feedXML.items[indx].title == findNameBoss)
       {
-        console.log('шось блядь найшли');
           if (findBoss == false)
           {
             findBoss = true;
@@ -129,7 +127,6 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
             boss.day = NormalDay(D.getDay()); 
             boss.nBoss = new Object();
             boss.nBoss = nameBoss;            
-            //boss += NormalnumData(D.getDate())+'.'+NormalnumData(D.getMonth()+1)+'.'+D.getFullYear();
           }
       }
    }

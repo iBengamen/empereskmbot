@@ -47,7 +47,8 @@ function onEnterFrame()
     //вкажемо час коли показувати повідомлення
     const timeToLoadRSS = '5:55';
     const timeToShowInfo = '6:0';
-    const timeToShowReminder = '14:35';
+    const timeToShowReminder = '13:0';
+    const timeToShowReminder2 = '10:0';
     
     const chatGroup = '-1001629835772';
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
@@ -84,10 +85,25 @@ function onEnterFrame()
             showMessage = true;
           }
         }
-        else
-        {
-          showMessage = false;
-        }
+        else if(currentTime == timeToShowReminder2)
+          {
+            if(!showMessage)
+            {
+              if(kmToday == null)
+              {
+                checkKMforFuture(7);
+              }
+            
+              var fmsg = '*Напоминаю, что сегодня у нас:* \n'+ kmToday;
+              bot.sendMessage(chatGroup,fmsg,{parse_mode:'Markdown'});
+              showMessage = true;
+            }
+          }
+          else
+          {
+            showMessage = false;
+          }
+        
 }
 
 function NormalnumData(num)
@@ -278,7 +294,7 @@ bot.on('message', msg => {
     const chatId = msg.chat.id;
 
     const firstStart = '/start'
-    const showAllKM = '/KM'
+    const showAllKM = '/sbor'
 
     console.log(chatId);
 

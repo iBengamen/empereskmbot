@@ -285,7 +285,10 @@ function checkKMforFuture(days = 30)
       return sndMsg;
 }
 
-
+bot.setMyCommands([{
+  command: '/start', description: 'Начальное приветствие',
+  command: '/sbor', description: 'Расписание КМ на 30 дней',
+}]);
 
 bot.on('message', msg => {
     

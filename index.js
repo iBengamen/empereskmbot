@@ -204,7 +204,7 @@ function sortArray(arr)
   return txtToday;
 }
 
-function arrToStr(arr,days=30)
+function arrToStr(arr, days=30)
 {
   var txt = '';
   arr.forEach(element => {
@@ -215,7 +215,7 @@ function arrToStr(arr,days=30)
     var aData = new Date(mirrordataYear1,mirrordataMonth1,mirrordataDay1);
     var dateToday = new Date();
     dateToday.setDate(dateToday.getDate()+days);
-    console.log('дата КМа ' + adata +'дата макс показа '+dateToday);
+    console.log('дата КМа ' + aData +'дата макс показа '+dateToday);
     if(aData<=dateToday)
     {
       txt += ('*' + element.data +'* _'+ element.day +' '+ element.nBoss +'_\n')
@@ -279,7 +279,7 @@ bot.on('message', msg => {
     const chatId = msg.chat.id;
 
     const firstStart = '/start'
-    const showAllKM = '/КМ'
+    const showAllKM = '/KM'
 
     console.log(chatId);
 

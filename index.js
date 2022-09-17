@@ -206,7 +206,7 @@ function sortArray(arr)
 
 function arrToStr(arr, days=30)
 {
-  var txt = '';
+  var txt = '*Расписание КМ на ближайшие '+days+' дней:* \n';
   arr.forEach(element => {
     //проверяем дату которую задали для показа сообщения
     var mirrordataYear1 = String(element.data)[6]+String(element.data)[7]+String(element.data)[8]+String(element.data)[9];
@@ -263,7 +263,7 @@ function checkKMforFuture(days = 30)
       
       
      
-      var sndMsg = '*Расписание КМ на ближайшие 30 дней:* \n'; 
+      var sndMsg = ''; 
       sndMsg += arrToStr(arrKM, days); 
       sndMsg += '\n \n'+'*Сегодня у нас:* \n'+ kmToday;
 

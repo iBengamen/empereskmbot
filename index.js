@@ -47,7 +47,7 @@ function onEnterFrame()
     //вкажемо час коли показувати повідомлення
     const timeToLoadRSS = '5:55';
     const timeToShowInfo = '6:0';
-    const timeToShowReminder = '15:30';
+    const timeToShowReminder = '14:35';
     
     const chatGroup = '-1001629835772';
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ

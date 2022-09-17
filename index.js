@@ -45,10 +45,10 @@ function onEnterFrame()
 
     var currentTime = Hh + ':' + Mm;
     //вкажемо час коли показувати повідомлення
-    const timeToShowInfo = '23:28';
-    const timeToShowReminder = '23:30';
-    const timeToLoadRSS = '23:26';
-
+    const timeToLoadRSS = '0:32';
+    const timeToShowInfo = '0:34';
+    const timeToShowReminder = '0:36';
+    
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
     if(currentTime == timeToShowInfo)
     {

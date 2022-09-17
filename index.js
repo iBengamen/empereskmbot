@@ -111,7 +111,7 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
   var boss = 'блядину неприсвоїло';
   
   for (var indx = 0; indx < feedXML.items.length; indx++) {  
-      console.log(feedXML.items[indx].title);
+      console.log(feedSiege.items[indx].title);
       if (feedXML.items[indx].title == findNameBoss)
       {
         console.log('шось блядь найшли');
@@ -122,20 +122,17 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
             var respDay = D.getDate() + newResp;
             D.setDate(respDay);
 
-            /*boss = new Object();
+            boss = new Object();
             boss.data = new Object();
             boss.data =  NormalnumData(D.getDate())+'.'+NormalnumData(D.getMonth()+1)+'.'+D.getFullYear();  
             boss.day = new Object();
             boss.day = NormalDay(D.getDay()); 
             boss.nBoss = new Object();
-            boss.nBoss = nameBoss;*/
-            boss = 'блядство заработало';
-            
+            boss.nBoss = nameBoss;            
             //boss += NormalnumData(D.getDate())+'.'+NormalnumData(D.getMonth()+1)+'.'+D.getFullYear();
           }
       }
    }
-   console.log('консоль блядь работа');
    return boss;
 }
 
@@ -222,28 +219,28 @@ function checkKMforFuture()
 {
   var arrKM = new Array();
 
-      arrKM.push(new Object(checkBossResp('Убит босс Beleth',5, 'Белеф')));
-      arrKM.push(new Object(checkBossResp('Убит босс Beleth',10, 'Белеф')));
-      arrKM.push(new Object(checkBossResp('Убит босс Beleth',15, 'Белеф')));
-      arrKM.push(new Object(checkBossResp('Убит босс Beleth',20, 'Белеф')));
-      arrKM.push(new Object(checkBossResp('Убит босс Beleth',25, 'Белеф')));
-      arrKM.push(new Object(checkBossResp('Убит босс Beleth',30, 'Белеф')));
+      arrKM.push(new Object(checkBossResp('Boss Beleth was killed',5, 'Белеф')));
+      arrKM.push(new Object(checkBossResp('Boss Beleth was killed',10, 'Белеф')));
+      arrKM.push(new Object(checkBossResp('Boss Beleth was killed',15, 'Белеф')));
+      arrKM.push(new Object(checkBossResp('Boss Beleth was killed',20, 'Белеф')));
+      arrKM.push(new Object(checkBossResp('Boss Beleth was killed',25, 'Белеф')));
+      arrKM.push(new Object(checkBossResp('Boss Beleth was killed',30, 'Белеф')));
 
-      arrKM.push(new Object(checkBossResp('Убит босс Baium',4, 'Баюм')));
-      arrKM.push(new Object(checkBossResp('Убит босс Baium',8, 'Баюм')));
-      arrKM.push(new Object(checkBossResp('Убит босс Baium',12, 'Баюм')));
-      arrKM.push(new Object(checkBossResp('Убит босс Baium',16, 'Баюм')));
-      arrKM.push(new Object(checkBossResp('Убит босс Baium',20, 'Баюм')));
-      arrKM.push(new Object(checkBossResp('Убит босс Baium',24, 'Баюм')));
-      arrKM.push(new Object(checkBossResp('Убит босс Baium',28, 'Баюм')));
+      arrKM.push(new Object(checkBossResp('Boss Baium was killed',4, 'Баюм')));
+      arrKM.push(new Object(checkBossResp('Boss Baium was killed',8, 'Баюм')));
+      arrKM.push(new Object(checkBossResp('Boss Baium was killed',12, 'Баюм')));
+      arrKM.push(new Object(checkBossResp('Boss Baium was killed',16, 'Баюм')));
+      arrKM.push(new Object(checkBossResp('Boss Baium was killed',20, 'Баюм')));
+      arrKM.push(new Object(checkBossResp('Boss Baium was killed',24, 'Баюм')));
+      arrKM.push(new Object(checkBossResp('Boss Baium was killed',28, 'Баюм')));
 
-      arrKM.push(new Object(checkBossResp('Убит босс Antharas',8, 'Антарас')));
-      arrKM.push(new Object(checkBossResp('Убит босс Antharas',16, 'Антарас')));
-      arrKM.push(new Object(checkBossResp('Убит босс Antharas',24, 'Антарас')));
+      arrKM.push(new Object(checkBossResp('Boss Antharas was killed',8, 'Антарас')));
+      arrKM.push(new Object(checkBossResp('Boss Antharas was killed',16, 'Антарас')));
+      arrKM.push(new Object(checkBossResp('Boss Antharas was killed',24, 'Антарас')));
 
-      arrKM.push(new Object(checkBossResp('Убит босс Valakas',8, 'Валакас')));
-      arrKM.push(new Object(checkBossResp('Убит босс Valakas',16, 'Валакас')));
-      arrKM.push(new Object(checkBossResp('Убит босс Valakas',24, 'Валакас')));
+      arrKM.push(new Object(checkBossResp('Boss Valakas was killed',8, 'Валакас')));
+      arrKM.push(new Object(checkBossResp('Boss Valakas was killed',16, 'Валакас')));
+      arrKM.push(new Object(checkBossResp('Boss Valakas was killed',24, 'Валакас')));
 
       arrKM.push(new Object(checkBossResp('Закончилась осада замка Rune',14, 'Осады, начало 18.00',feedSiege)));
       arrKM.push(new Object(checkBossResp('Закончились битвы за земли',14, 'Битвы за земли, начало 20.00',feedTW)));
@@ -290,7 +287,7 @@ bot.on('message', msg => {
       bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
       
       //console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
-      console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
+      console.log(checkBossResp('Boss Beleth was killed',5, 'Белеф',feed));
 
       console.log();
     }  

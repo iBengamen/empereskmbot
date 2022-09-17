@@ -47,7 +47,7 @@ function onEnterFrame()
     //вкажемо час коли показувати повідомлення
     const timeToLoadRSS = '5:55';
     const timeToShowInfo = '6:0';
-    const timeToShowReminder = '13:0';
+    const timeToShowReminder = '15:30';
     
     const chatGroup = '-1001629835772';
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
@@ -215,7 +215,6 @@ function arrToStr(arr, days=30)
     var aData = new Date(mirrordataYear1,mirrordataMonth1-1,mirrordataDay1);
     var dateToday = new Date();
     dateToday.setDate(dateToday.getDate()+days);
-    console.log('дата КМа ' + aData +'дата макс показа '+dateToday);
     if(aData<=dateToday)
     {
       txt += ('*' + element.data +'* _'+ element.day +' '+ element.nBoss +'_\n')
@@ -290,7 +289,7 @@ bot.on('message', msg => {
 
     if(text == showAllKM)
     {
-      var fmsg = checkKMforFuture(7);
+      var fmsg = checkKMforFuture(30);
       bot.sendMessage(chatId,fmsg,{parse_mode:'Markdown'});
     }  
     

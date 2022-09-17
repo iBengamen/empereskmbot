@@ -303,7 +303,7 @@ bot.on('message', msg => {
 
     if(text == firstStart)
     {
-      
+      bot.sendMessage(chatId,'*Тебя приветствует чат бот, который отслеживает КМы для пачки Huligans Emperes клана.* \n Для получение информации о КМах используй комманду /sbor',{parse_mode:'Markdown'});
     }
 
     if(text == showAllKM)

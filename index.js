@@ -283,13 +283,8 @@ bot.on('message', msg => {
       var sTime = Hh + ':' + Mm;
 
       
-      //var fmsg = checkKMforFuture();
-      bot.sendMessage(chatId,'Тестируем заебал',{parse_mode:'Markdown'});
-      
-      //console.log(checkBossResp('Убит босс Beleth',5, 'Белеф',feed));
-      console.log(checkBossResp('Boss Beleth was killed',5, 'Белеф',feed));
-
-      console.log();
+      var fmsg = checkKMforFuture();
+      bot.sendMessage(chatId,fmsg,{parse_mode:'Markdown'});
     }  
     
 })

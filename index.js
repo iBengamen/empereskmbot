@@ -108,7 +108,7 @@ function NormalDay(num)
 function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
 {
   var findBoss = false;
-  var boss = 'блядину неприсвоїло';
+  var boss;
   
   for (var indx = 0; indx < feedXML.items.length; indx++) {  
       console.log(feedTW.items[indx].title);
@@ -243,10 +243,10 @@ function checkKMforFuture()
       arrKM.push(new Object(checkBossResp('Boss Valakas was killed',24, 'Валакас')));
 
       arrKM.push(new Object(checkBossResp('The siege of Rune has ended',14, 'Осады, начало 18.00',feedSiege)));
-      arrKM.push(new Object(checkBossResp('Закончились битвы за земли',14, 'Битвы за земли, начало 20.00',feedTW)));
+      arrKM.push(new Object(checkBossResp('Territory wars has ended',14, 'Битвы за земли, начало 20.00',feedTW)));
 
       arrKM.push(new Object(checkBossResp('The siege of Rune has ended',28, 'Осады, начало 18.00',feedSiege)));
-      arrKM.push(new Object(checkBossResp('Закончились битвы за земли',28, 'Битвы за земли, начало 20.00',feedTW)));
+      arrKM.push(new Object(checkBossResp('Territory wars has ended',28, 'Битвы за земли, начало 20.00',feedTW)));
 
       kmToday = sortArray(arrKM);
 

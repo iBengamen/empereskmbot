@@ -212,7 +212,7 @@ function arrToStr(arr, days=30)
     var mirrordataYear1 = String(element.data)[6]+String(element.data)[7]+String(element.data)[8]+String(element.data)[9];
     var mirrordataMonth1 = String(element.data)[3]+String(element.data)[4];
     var mirrordataDay1 = String(element.data)[0]+String(element.data)[1];
-    var aData = new Date(mirrordataYear1,mirrordataMonth1,mirrordataDay1);
+    var aData = new Date(mirrordataYear1,mirrordataMonth1-1,mirrordataDay1);
     var dateToday = new Date();
     dateToday.setDate(dateToday.getDate()+days);
     console.log('дата КМа ' + aData +'дата макс показа '+dateToday);

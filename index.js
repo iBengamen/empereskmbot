@@ -48,12 +48,12 @@ function onEnterFrame()
     //вкажемо час коли показувати повідомлення
     const timeToLoadRSS = '5:55';
     const timeToShowInfo = '6:0';
-    const timeToShowReminder = '12:41';//'13:0';
-    const timeToShowReminder2 = '12:43';//'10:0';
+    const timeToShowReminder = '13:0';//'13:0';
+    const timeToShowReminder2 = '10:0';//'10:0';
     
     //const chatGroup = '-1001629835772'; //ID группы ХНС
-    //const chatGroup = '-1001700314179';//ID групы ХНС инфо
-    const chatGroup = '-1001610386582';
+    const chatGroup = '-1001700314179';//ID групы ХНС инфо
+    //const chatGroup = '-1001610386582';
     
 
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
@@ -318,8 +318,6 @@ bot.on('message', msg => {
       var fmsg = checkKMforFuture(30);
       bot.sendMessage(chatId,fmsg,{parse_mode:'Markdown'});
     } 
-    
-    bot.sendMessage('-1001610386582','Хуйня у коня',{parse_mode:'Markdown'});
     
 })
 //ентерфрейм

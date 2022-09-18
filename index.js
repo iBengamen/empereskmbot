@@ -35,7 +35,6 @@ loadXMLBoss();
 loadXMLSiege();
 loadXMLTW();
 
-bot.sendMessage('-1001610386582','отправка в группу при старте бота',{parse_mode:'Markdown'});
 
 function onEnterFrame()
 {
@@ -56,7 +55,9 @@ function onEnterFrame()
     //const chatGroup = '-1001700314179';//ID групы ХНС инфо
     const chatGroup = '-1001610386582';
 
-    console.log();
+    //bot.sendMessage('-1001610386582',currentTime,{parse_mode:'Markdown'});
+    
+    console.log(currentTime);
 
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
     if(currentTime == timeToShowInfo)

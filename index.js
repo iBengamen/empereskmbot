@@ -48,7 +48,7 @@ function onEnterFrame()
     //вкажемо час коли показувати повідомлення
     const timeToLoadRSS = '5:55';
     const timeToShowInfo = '6:0';
-    const timeToShowReminder = '12.37';//'13:0';
+    const timeToShowReminder = '12.40';//'13:0';
     const timeToShowReminder2 = '12.22';//'10:0';
     
     //const chatGroup = '-1001629835772'; //ID группы ХНС

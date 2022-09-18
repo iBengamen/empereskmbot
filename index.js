@@ -304,9 +304,11 @@ bot.on('message', msg => {
 
     console.log(chatId);
 
+    bot.sendMessage('-1001610386582','Тестируем');
+
     if(text == firstStart)
     {
-      bot.sendMessage(chatGroup,'*Тебя приветствует чат бот, который отслеживает КМы для пачки Huligans Emperes клана.* \n Для получение информации о КМах используй комманду /sbor',{parse_mode:'Markdown'});
+      bot.sendMessage(chatId,'*Тебя приветствует чат бот, который отслеживает КМы для пачки Huligans Emperes клана.* \n Для получение информации о КМах используй комманду /sbor',{parse_mode:'Markdown'});
     }
 
     if(text == showAllKM)

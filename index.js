@@ -37,6 +37,7 @@ loadXMLTW();
 
 function onEnterFrame()
 {
+  console.log("ентер фрейм работа");
   var today = new Date();
  
     // получаем дату и время

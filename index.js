@@ -47,11 +47,12 @@ function onEnterFrame()
     //вкажемо час коли показувати повідомлення
     const timeToLoadRSS = '5:55';
     const timeToShowInfo = '6:0';
-    const timeToShowReminder = '11.40';//'13:0';
+    const timeToShowReminder = '11.45';//'13:0';
     const timeToShowReminder2 = '12.40';//'10:0';
     
     //const chatGroup = '-1001629835772'; //ID группы ХНС
-    const chatGroup = '-1001700314179';
+    //const chatGroup = '-1001700314179';//ID групы ХНС инфо
+    const chatGroup = '-1001610386582';
 
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
     if(currentTime == timeToShowInfo)

@@ -304,7 +304,7 @@ bot.on('message', msg => {
 
     console.log(chatId);
 
-    bot.sendMessage('-1001610386582','Тестируем');
+    bot.sendMessage(chatId,'Тестируем');
 
     if(text == firstStart)
     {

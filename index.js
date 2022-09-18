@@ -48,16 +48,13 @@ function onEnterFrame()
     //вкажемо час коли показувати повідомлення
     const timeToLoadRSS = '5:55';
     const timeToShowInfo = '6:0';
-    const timeToShowReminder = '12.20';//'13:0';
+    const timeToShowReminder = '12.32';//'13:0';
     const timeToShowReminder2 = '12.22';//'10:0';
     
     //const chatGroup = '-1001629835772'; //ID группы ХНС
     //const chatGroup = '-1001700314179';//ID групы ХНС инфо
     const chatGroup = '-1001610386582';
-
-    //bot.sendMessage('-1001610386582',currentTime,{parse_mode:'Markdown'});
     
-    console.log(currentTime);
 
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
     if(currentTime == timeToShowInfo)

@@ -304,8 +304,7 @@ bot.on('message', msg => {
 
     console.log(chatId);
 
-    bot.sendMessage(chatId,'Тестируем');
-
+   
     if(text == firstStart)
     {
       bot.sendMessage(chatId,'*Тебя приветствует чат бот, который отслеживает КМы для пачки Huligans Emperes клана.* \n Для получение информации о КМах используй комманду /sbor',{parse_mode:'Markdown'});
@@ -315,7 +314,9 @@ bot.on('message', msg => {
     {
       var fmsg = checkKMforFuture(30);
       bot.sendMessage(chatId,fmsg,{parse_mode:'Markdown'});
-    }  
+    } 
+    
+    bot.sendMessage('-1001610386582','Хуйня у коня',{parse_mode:'Markdown'});
     
 })
 //ентерфрейм

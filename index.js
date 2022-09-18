@@ -35,9 +35,10 @@ loadXMLBoss();
 loadXMLSiege();
 loadXMLTW();
 
+bot.sendMessage('-1001610386582','отправка в группу при старте бота',{parse_mode:'Markdown'});
+
 function onEnterFrame()
 {
-  console.log("ентер фрейм работа");
   var today = new Date();
  
     // получаем дату и время
@@ -54,6 +55,8 @@ function onEnterFrame()
     //const chatGroup = '-1001629835772'; //ID группы ХНС
     //const chatGroup = '-1001700314179';//ID групы ХНС инфо
     const chatGroup = '-1001610386582';
+
+    console.log();
 
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
     if(currentTime == timeToShowInfo)

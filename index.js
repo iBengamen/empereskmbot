@@ -47,8 +47,8 @@ function onEnterFrame()
     //вкажемо час коли показувати повідомлення
     const timeToLoadRSS = '5:55';
     const timeToShowInfo = '6:0';
-    const timeToShowReminder = '12.16';//'13:0';
-    const timeToShowReminder2 = '15.16';//'10:0';
+    const timeToShowReminder = '12.20';//'13:0';
+    const timeToShowReminder2 = '12.22';//'10:0';
     
     //const chatGroup = '-1001629835772'; //ID группы ХНС
     //const chatGroup = '-1001700314179';//ID групы ХНС инфо
@@ -74,8 +74,9 @@ function onEnterFrame()
           }
 
           var fmsg = '*Напоминаю, что сегодня у нас:* \n'+ kmToday;
-          bot.sendMessage(chatGroup,fmsg,{parse_mode:'Markdown'});
+          bot.sendMessage('-1001610386582',fmsg,{parse_mode:'Markdown'});
           showMessage = true;
+          console.log('сработало первое напоминание');
         }
       }
       else if(currentTime == timeToLoadRSS)
@@ -98,8 +99,9 @@ function onEnterFrame()
               }
             
               var fmsg = '*Напоминаю, что сегодня у нас:* \n'+ kmToday;
-              bot.sendMessage(chatGroup,fmsg,{parse_mode:'Markdown'});
+              bot.sendMessage('-1001610386582',fmsg,{parse_mode:'Markdown'});
               showMessage = true;
+              console.log('сработало второе напоминание');
             }
           }
           else

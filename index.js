@@ -207,7 +207,27 @@ function sortArray(arr)
 
             if(write == true)
             {
-              arrToday.push(String(arr[ind].nBoss));;
+              arrToday.push(String(arr[ind].nBoss));
+              var obj = new Object();
+              obj.txt = new Object();
+              obj.attenTime = new Object();
+              if (arr[ind].nBoss == 'Осады, начало 18.00')
+              {
+                obj.txt = '!!!Начинаем сбор на осаду!!!';
+                obj.attenTime = '14:0';
+              }
+              else
+                if (arr[ind].nBoss == '*Битвы за земли, начало 20.00*')
+                {
+                  obj.txt = '*!!!Начинаем сбор на ТВ!!!*';
+                  obj.attenTime = '16:0';
+                }
+                else
+                  {
+                    obj.txt = '*!!!Ждем респ '+element.nBoss+ '!!!*'
+                    obj.attenTime = '15:45';
+                  }
+              attention.push(obj); 
             }
           }
         }
@@ -252,31 +272,8 @@ function arrToStr(arr, days=30)
     var dateToday = new Date();
     dateToday.setDate(dateToday.getDate()+days);
     if(aData<=dateToday)
-    {
-      
-      var obj = new Object();
-      obj.txt = new Object();
-      obj.attenTime = new Object();
-      
+    {      
       txt += ('*' + element.data +'* _'+ element.day +' '+ element.nBoss +'_\n');
-      if (element.nBoss == 'Осады, начало 18.00')
-      {
-        obj.txt = '!!!Начинаем сбор на осаду!!!';
-        obj.attenTime = '14:0';
-      }
-      else
-        if (element.nBoss == '*Битвы за земли, начало 20.00*')
-        {
-          obj.txt = '*!!!Начинаем сбор на ТВ!!!*';
-          obj.attenTime = '16:0';
-        }
-        else
-          {
-            obj.txt = '*!!!Ждем респ '+element.nBoss+ '!!!*'
-            obj.attenTime = '15:45';
-          }
-      attention.push(obj);    
-
     }
   });
   return txt;

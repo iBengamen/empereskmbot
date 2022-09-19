@@ -57,7 +57,6 @@ function onEnterFrame()
     //const chatGroup = '-1001610386582';
     
     //проверяем непришло ли время показать оповещение о начале респа
-    console.log(attention);
     attention.forEach(element => {
         if (currentTime == element.attenTime)
         {

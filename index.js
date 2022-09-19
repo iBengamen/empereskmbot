@@ -272,7 +272,7 @@ function arrToStr(arr, days=30)
         else
           {
             obj.txt = '*!!!Ждем респ '+element.nBoss+ '!!!*'
-            obj.attenTime = '15:40';
+            obj.attenTime = '15:45';
           }
       attention.push(obj);    
 

@@ -10,6 +10,7 @@ const parser = new Parser();
 var feed;
 var feedSiege;
 var feedTW;
+var attention = Array();
 
 var showMessage = false;
 
@@ -54,6 +55,15 @@ function onEnterFrame()
     //const chatGroup = '-1001629835772'; //ID группы ХНС
     const chatGroup = '-1001700314179';//ID групы ХНС инфо
     //const chatGroup = '-1001610386582';
+    
+    //проверяем непришло ли время показать оповещение о начале респа
+    array.forEach(element => {
+        if (currentTime == element.attenTime)
+        {
+          element.attenTime = '';
+          bot.sendMessage(chatGroup,element.txt,{parse_mode:'Markdown'});
+        }
+    });
     
 
     //перевіряємо чи неприйшов час показати повідомлення про респ РБ
@@ -102,7 +112,7 @@ function onEnterFrame()
               var fmsg = '*Напоминаю, что сегодня у нас:* \n'+ kmToday;
               bot.sendMessage(chatGroup,fmsg,{parse_mode:'Markdown'});
               showMessage = true;
-              console.log('сработало второе напоминание');
+              
             }
           }
           else
@@ -229,6 +239,9 @@ function sortArray(arr)
 function arrToStr(arr, days=30)
 {
   var txt = '*Расписание КМ на ближайшие '+days+' дней:* \n';
+  attention = null;
+  attention = new Array();
+
   arr.forEach(element => {
     //проверяем дату которую задали для показа сообщения
     var mirrordataYear1 = String(element.data)[6]+String(element.data)[7]+String(element.data)[8]+String(element.data)[9];
@@ -239,7 +252,30 @@ function arrToStr(arr, days=30)
     dateToday.setDate(dateToday.getDate()+days);
     if(aData<=dateToday)
     {
-      txt += ('*' + element.data +'* _'+ element.day +' '+ element.nBoss +'_\n')
+      
+      var obj = new Object();
+      obj.txt = new Object();
+      obj.attenTime = new Object();
+      
+      txt += ('*' + element.data +'* _'+ element.day +' '+ element.nBoss +'_\n');
+      if (element.nBoss == 'Осады, начало 18.00')
+      {
+        obj.txt = '!!!Начинаем сбор на осаду!!!';
+        obj.attenTime = '14:0';
+      }
+      else
+        if (element.nBoss == '*Битвы за земли, начало 20.00*')
+        {
+          obj.txt = '*!!!Начинаем сбор на ТВ!!!*';
+          obj.attenTime = '16:0';
+        }
+        else
+          {
+            obj.txt = '*!!!Ждем респ '+element.nBoss+ '!!!*'
+            obj.attenTime = '15:40';
+          }
+      attention.push(obj);    
+
     }
   });
   return txt;

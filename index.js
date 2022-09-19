@@ -174,6 +174,9 @@ function sortArray(arr)
   var today = new Date();
   var txtToday = 'Сегодня нет КМов, отдыхаем товарищи';
 
+  attention = null;
+  attention = new Array();
+
   while (ind<arr.length-1) {
     if(ind+1 <= arr.length-1)
     {     
@@ -260,9 +263,6 @@ function sortArray(arr)
 function arrToStr(arr, days=30)
 {
   var txt = '*Расписание КМ на ближайшие '+days+' дней:* \n';
-  attention = null;
-  attention = new Array();
-
   arr.forEach(element => {
     //проверяем дату которую задали для показа сообщения
     var mirrordataYear1 = String(element.data)[6]+String(element.data)[7]+String(element.data)[8]+String(element.data)[9];

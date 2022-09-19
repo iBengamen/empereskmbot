@@ -227,7 +227,7 @@ function sortArray(arr)
                 }
                 else
                   {
-                    obj.txt = '*!!!Ждем респ '+arr[ind].nBoss+ '!!!*'
+                    obj.txt = '*!!!Ждем респ '+arr[ind].nBoss+ 'а!!!*'
                     obj.attenTime = '15:45';
                   }
               attention.push(obj); 

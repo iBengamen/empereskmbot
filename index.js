@@ -226,6 +226,7 @@ function sortArray(arr)
                 }
                 else
                   {
+                    console.log(arr[ind].nBoss);
                     obj.txt = '*!!!Ждем респ '+arr[ind].nBoss+ 'а!!!*'
                     obj.attenTime = '15:0';
                   }

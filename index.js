@@ -235,6 +235,8 @@ function sortArray(arr)
         }
       }
 
+      console.log(attention);
+
       if(aData>bData)
       {
         var sortElement;

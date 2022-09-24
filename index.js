@@ -235,8 +235,6 @@ function sortArray(arr)
         }
       }
 
-      console.log(attention);
-
       if(aData>bData)
       {
         var sortElement;
@@ -250,6 +248,7 @@ function sortArray(arr)
         ind++;      
       }
     }
+    console.log(attention);
   }
   if(arrToday.length>0)
   {

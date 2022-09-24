@@ -215,7 +215,7 @@ function sortArray(arr)
               obj.attenTime = new Object();
               if (arr[ind].nBoss == 'Осады, начало 18.00')
               {
-                obj.txt = '!!!Начинаем сбор на осаду!!!';
+                obj.txt = '*!!!Начинаем сбор на осаду!!!*';
                 obj.attenTime = '14:0';
               }
               else

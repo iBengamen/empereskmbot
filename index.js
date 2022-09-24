@@ -248,8 +248,10 @@ function sortArray(arr)
         ind++;      
       }
     }
-    console.log(attention);
   }
+
+  console.log(attention);
+  
   if(arrToday.length>0)
   {
     txtToday = '';

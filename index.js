@@ -219,14 +219,13 @@ function sortArray(arr)
                 obj.attenTime = '14:0';
               }
               else
-                if (arr[ind].nBoss == '*Битвы за земли, начало 20.00*')
+                if (arr[ind].nBoss == 'Битвы за земли, начало 20.00')
                 {
                   obj.txt = '*!!!Начинаем сбор на ТВ!!!*';
                   obj.attenTime = '16:0';
                 }
                 else
                   {
-                    console.log(arr[ind].nBoss);
                     obj.txt = '*!!!Ждем респ '+arr[ind].nBoss+ 'а!!!*'
                     obj.attenTime = '15:0';
                   }

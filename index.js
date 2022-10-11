@@ -173,8 +173,8 @@ function sortArray(arr)
   var today = new Date();
   var txtToday = 'Сегодня нет КМов, отдыхаем товарищи';
 
-  attention = null;
-  attention = new Array();
+  attention = [];
+  
 
   while (ind<arr.length-1) {
     if(ind+1 <= arr.length-1)

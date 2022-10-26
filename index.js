@@ -328,10 +328,10 @@ function checkKMforFuture(days = 30)
       return sndMsg;
 }
 
-bot.setMyCommands([
+/*bot.setMyCommands([
   {command: '/start', description: 'Начальное приветствие'},
   {command: '/sbor', description: 'Расписание КМ на 30 дней'}
-]);
+]);*/
 
 bot.on('message', msg => {
     
@@ -341,8 +341,11 @@ bot.on('message', msg => {
 
     const firstStart = '/start'
     const showAllKM = '/sbor'
+  
 
     console.log(chatId);
+
+    console.log(feed);
 
    
     if(text == firstStart)
@@ -363,4 +366,4 @@ setInterval(onEnterFrame, 1000, 1);
 
 /*PS E:\HTML5\telegram_bot> git remote add origin https://github.com/iBengamen/empereskmbot.git
 fatal: remote origin already exists.
-PS E:\HTML5\telegram_bot> git push origin master*/
+PS E:\HTML5\telegram_bot>  */

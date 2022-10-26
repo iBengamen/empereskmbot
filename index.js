@@ -154,7 +154,7 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feedBoss)
             var D = new Date(feedXML.items[indx].pubDate);
             
             var Dobj = feedXML.items[indx].pubDate;   
-            console.log(String(Dobj).slice(5,10));
+            console.log(String(Dobj).slice(5,11));
 
             var respDay = D.getDate() + newResp;
             D.setDate(respDay);
@@ -352,7 +352,7 @@ bot.on('message', msg => {
 
     console.log('тест');
 
-    console.log(feedBoss);
+   //console.log(feedBoss);
 
    
     if(text == firstStart)

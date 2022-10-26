@@ -7,7 +7,7 @@ const bot = new TelegramApi(token, {polling: true})
 //npm install --save rss-parser
 const Parser = require('rss-parser');
 const parser = new Parser();
-var feed;
+var feedBoss;
 var feedSiege;
 var feedTW;
 var attention = Array();
@@ -18,7 +18,7 @@ var kmToday;
 
 async function loadXMLBoss()
 {
-   feed = await parser.parseURL('https://asterios.tm/index.php?cmd=rss&serv=0&filter=epic&count=100&out=xml');
+   feedBoss = await parser.parseURL('https://asterios.tm/index.php?cmd=rss&serv=0&filter=epic&count=100&out=xml');
 }
 
 async function loadXMLSiege()
@@ -139,7 +139,7 @@ function NormalDay(num)
   return day[num];
 }
 
-function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feed)
+function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feedBoss)
 {
   var findBoss = false;
   var boss;
@@ -345,7 +345,7 @@ bot.on('message', msg => {
 
     console.log(chatId);
 
-    console.log(feed);
+    console.log(feedBoss);
 
    
     if(text == firstStart)

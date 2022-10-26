@@ -366,4 +366,4 @@ setInterval(onEnterFrame, 1000, 1);
 
 /*PS E:\HTML5\telegram_bot> git remote add origin https://github.com/iBengamen/empereskmbot.git
 fatal: remote origin already exists.
-PS E:\HTML5\telegram_bot>  */
+PS E:\HTML5\telegram_bot>  git push origin master*/

@@ -155,7 +155,7 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feedBoss)
             var Dobj = feedXML.items[indx].pubDate;  
             var D = new Date(String(Dobj).slice(5,11));
                          
-            console.log(D);
+            //console.log(D);
 
             var respDay = D.getDate() + newResp;
             D.setDate(respDay);

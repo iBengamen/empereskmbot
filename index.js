@@ -144,6 +144,8 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feedBoss)
   var findBoss = false;
   var boss;
   
+  console.log(feedXML);
+
   for (var indx = 0; indx < feedXML.items.length; indx++) {  
       if (feedXML.items[indx].title == findNameBoss)
       {

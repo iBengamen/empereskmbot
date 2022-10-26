@@ -347,7 +347,7 @@ bot.on('message', msg => {
 
     console.log(chatId);
 
-    console.log(feedBoss);
+    console.log('тест');
 
    
     if(text == firstStart)

@@ -173,18 +173,6 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feedBoss)
    return boss;
 }
 
-function checkOurBeleth(ch_boss){
-  //var notOurBeleth = new Data(2022,10,31);
-  var bossName = ch_boss;
-
-  if(bossName == 'Белеф');
-  {
-    bossName = 'Белеф едрить его в дышло'
-  }
-
-  return String(bossName);
-
-}
 
 function sortArray(arr)
 {
@@ -232,8 +220,7 @@ function sortArray(arr)
 
             if(write == true)
             {
-              var bss = checkOurBeleth(arr[ind].nBoss);
-              arrToday.push(String(bss));
+              arrToday.push(String(arr[ind].nBoss));
               var obj = new Object();
               obj.txt = new Object();
               obj.attenTime = new Object();
@@ -367,9 +354,6 @@ bot.on('message', msg => {
   
 
     console.log(chatId);
-
-    console.log('тест');
-
    //console.log(feedBoss);
 
    

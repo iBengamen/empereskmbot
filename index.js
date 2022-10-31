@@ -177,10 +177,10 @@ function checkOurBeleth(ch_boss){
   //var notOurBeleth = new Data(2022,10,31);
   var bossName = ch_boss;
 
-  /*if(bossName == 'Белеф');
+  if(bossName == 'Белеф');
   {
     bossName = 'Белеф едрить его в дышло'
-  }*/
+  }
 
   return String(bossName);
 

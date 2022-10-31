@@ -232,8 +232,8 @@ function sortArray(arr)
 
             if(write == true)
             {
-              //var bss = checkOurBeleth(arr[ind].nBoss);
-              arrToday.push(String(arr[ind].nBoss));
+              var bss = checkOurBeleth(arr[ind].nBoss);
+              arrToday.push(String(bss));
               var obj = new Object();
               obj.txt = new Object();
               obj.attenTime = new Object();

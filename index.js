@@ -173,6 +173,19 @@ function checkBossResp(findNameBoss, newResp, nameBoss, feedXML=feedBoss)
    return boss;
 }
 
+function checkOurBeleth(ch_boss){
+  var notOurBeleth = new Data(String(2022,10,31));
+  var bossName = ch_boss.nBoss;
+
+  if(bossName == 'Белеф');
+  {
+    bossName = 'Белеф едрить его в дышло'
+  }
+
+  return bossName;
+
+}
+
 function sortArray(arr)
 {
   var ind = 0;
@@ -219,7 +232,7 @@ function sortArray(arr)
 
             if(write == true)
             {
-              arrToday.push(String(arr[ind].nBoss));
+              arrToday.push(String(checkOurBeleth(arr[ind].nBoss)));
               var obj = new Object();
               obj.txt = new Object();
               obj.attenTime = new Object();

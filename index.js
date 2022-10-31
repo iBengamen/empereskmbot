@@ -183,8 +183,8 @@ function sortArray(arr)
   attention = [];
   
 
-  while (ind<arr.length) {
-    if(ind+1 <= arr.length)
+  while (ind<arr.length-1) {
+    if(ind+1 <= arr.length-1)
     {     
       var mirrordataYear1 = String(arr[ind].data)[6]+String(arr[ind].data)[7]+String(arr[ind].data)[8]+String(arr[ind].data)[9];
       var mirrordataMonth1 = String(arr[ind].data)[3]+String(arr[ind].data)[4];
@@ -194,8 +194,8 @@ function sortArray(arr)
       var mirrordataMonth2 = String(arr[ind+1].data)[3]+String(arr[ind+1].data)[4];
       var mirrordataDay2 = String(arr[ind+1].data)[0]+String(arr[ind+1].data)[1];
 
-      var aData = new Date(mirrordataYear1,mirrordataMonth1,mirrordataDay1);
-      var bData = new Date(mirrordataYear2,mirrordataMonth2,mirrordataDay2);
+      var aData = new Date(mirrordataYear1,mirrordataMonth1-1,mirrordataDay1);
+      var bData = new Date(mirrordataYear2,mirrordataMonth2-1,mirrordataDay2);
 
       //проверяем есть ли сегодня КМ
       //console.log('Сегодня = '+ today);
@@ -203,7 +203,7 @@ function sortArray(arr)
 
       if((today.getDate()) == aData.getDate())  
       {
-        if((today.getMonth()+1) == aData.getMonth())
+        if((today.getMonth()) == aData.getMonth())
         {
           if (today.getFullYear()==aData.getFullYear())
           {

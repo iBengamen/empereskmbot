@@ -198,6 +198,9 @@ function sortArray(arr)
       var bData = new Date(mirrordataYear2,mirrordataMonth2,mirrordataDay2);
 
       //проверяем есть ли сегодня КМ
+      console.log('Сегодня = '+ today);
+      console.log('босс - ' + aData);
+
       if((today.getDate()) == aData.getDate())  
       {
         if((today.getMonth()+1) == aData.getMonth())

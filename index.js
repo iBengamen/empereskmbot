@@ -183,8 +183,8 @@ function sortArray(arr)
   attention = [];
   
 
-  while (ind<arr.length-1) {
-    if(ind+1 <= arr.length-1)
+  while (ind<arr.length) {
+    if(ind+1 <= arr.length)
     {     
       var mirrordataYear1 = String(arr[ind].data)[6]+String(arr[ind].data)[7]+String(arr[ind].data)[8]+String(arr[ind].data)[9];
       var mirrordataMonth1 = String(arr[ind].data)[3]+String(arr[ind].data)[4];

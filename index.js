@@ -54,7 +54,7 @@ function onEnterFrame()
     
     
     //const chatGroup = '-1001629835772'; //ID группы ХНС
-    const chatGroup = '-1001700314179';//ID групы ХНС инфо
+    const chatGroup = '-1001624316331';//ID групы ХНС
     //const chatGroup = '-1001610386582';
     
     //проверяем непришло ли время показать оповещение о начале респа

@@ -60,10 +60,10 @@ function onEnterFrame()
     var currentTime = Hh + ':' + Mm;
     //вкажемо час коли показувати повідомлення
     const timeToLoadRSS = '0:10';
-    const timeToShowInfo = '9:0';
+    const timeToShowInfo = '6:0';
     
 
-    const timeToShowReminder = '13:0';//'14:0';
+    const timeToShowReminder = '10:0';//'13:0';
     const timeToShowReminder2 = '150:0';//'10:0';//поставил 150 чтобы временно отключить напоминалку и оставить 1 раз в 14.00 по МСК
     
     
@@ -293,18 +293,18 @@ function sortArray(arr)
               if (arr[ind].nBoss == 'Осады, начало 18.00')
               {
                 obj.txt = '*!!!Начинаем сбор на осаду!!!*';
-                obj.attenTime = '17:30';
+                obj.attenTime = '14:30';
               }
               else
                 if (arr[ind].nBoss == 'Битвы за земли, начало 20.00')
                 {
                   obj.txt = '*!!!Начинаем сбор на ТВ!!!*';
-                  obj.attenTime = '19:30';
+                  obj.attenTime = '16:30';
                 }
                 else
                   {
                     obj.txt = '*!!!Ждем респ '+arr[ind].nBoss+ 'а!!!*'
-                    obj.attenTime = '18:0';
+                    obj.attenTime = '15:0';
                   }
               attention.push(obj); 
             }
@@ -361,7 +361,7 @@ function arrToStr(arr, days=30)
 function checkKMforFuture(days = 30)
 {
   var arrKM = new Array();
-//для английских серверів
+/*для английских серверів*/
       arrKM.push(new Object(checkBossResp('Boss Beleth was killed',5, 'Белеф')));
       arrKM.push(new Object(checkBossResp('Boss Beleth was killed',10, 'Белеф')));
       arrKM.push(new Object(checkBossResp('Boss Beleth was killed',15, 'Белеф')));
@@ -391,8 +391,7 @@ function checkKMforFuture(days = 30)
       arrKM.push(new Object(checkBossResp('The siege of Rune has ended',28, 'Осады, начало 18.00',feedSiege)));
       arrKM.push(new Object(checkBossResp('Territory wars has ended',28, 'Битвы за земли, начало 20.00',feedTW)));
 
-//для російських серверів
-/*
+/*//для російських серверів
       arrKM.push(new Object(checkBossResp('Убит босс Beleth',5, 'Белеф')));
       arrKM.push(new Object(checkBossResp('Убит босс Beleth',10, 'Белеф')));
       arrKM.push(new Object(checkBossResp('Убит босс Beleth',15, 'Белеф')));

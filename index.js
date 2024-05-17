@@ -361,7 +361,7 @@ function arrToStr(arr, days=30)
 function checkKMforFuture(days = 30)
 {
   var arrKM = new Array();
-/*для английских серверів
+//для английских серверів
       arrKM.push(new Object(checkBossResp('Boss Beleth was killed',5, 'Белеф')));
       arrKM.push(new Object(checkBossResp('Boss Beleth was killed',10, 'Белеф')));
       arrKM.push(new Object(checkBossResp('Boss Beleth was killed',15, 'Белеф')));
@@ -390,8 +390,9 @@ function checkKMforFuture(days = 30)
 
       arrKM.push(new Object(checkBossResp('The siege of Rune has ended',28, 'Осады, начало 18.00',feedSiege)));
       arrKM.push(new Object(checkBossResp('Territory wars has ended',28, 'Битвы за земли, начало 20.00',feedTW)));
-*/
+
 //для російських серверів
+/*
       arrKM.push(new Object(checkBossResp('Убит босс Beleth',5, 'Белеф')));
       arrKM.push(new Object(checkBossResp('Убит босс Beleth',10, 'Белеф')));
       arrKM.push(new Object(checkBossResp('Убит босс Beleth',15, 'Белеф')));
@@ -420,7 +421,7 @@ function checkKMforFuture(days = 30)
 
       arrKM.push(new Object(checkBossResp('Закончилась осада замка Rune',28, 'Осады, начало 18.00',feedSiege)));
       arrKM.push(new Object(checkBossResp('Закончились битвы за земли',28, 'Битвы за земли, начало 20.00',feedTW)));
-
+*/
       kmToday = sortArray(arrKM);
 
 

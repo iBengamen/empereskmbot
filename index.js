@@ -15,7 +15,7 @@ var modeSendGroup = false;
 
 var showMessage = false;
 const chatGroup = '-1001808288200';
-const chatGroupGareg = '-4016543372';
+const chatGroupGareg = '-1002215788892';
 const chatGroupEquipp = '-1002103477991';
 const chatGroupPLKA = '-1001606164544';
 const chatGroupMario1 = '-1001733456948';
@@ -523,20 +523,10 @@ bot.on('message', msg => {
       bot.sendMessage(chatId,'Сообщение успешно переслано в группу еквипеда',{parse_mode:'Markdown'});
       //bot.sendMessage(chatGroup,text,{parse_mode:'Markdown'});
       //bot.sendMessage(chatGroupEquipp,text,{parse_mode:'Markdown'});
+      bot.sendMessage(chatGroupGareg,text,{parse_mode:'Markdown'});
+      bot.sendMessage(chatId,text,{parse_mode:'Markdown'});
     }
  
-    /*var myID = '1221349806';
-    if(chatId == papisdetiGroup)
-      {
-        var spyText = '*Господа вещают:* \n'+ '_'+text+'_';
-        bot.sendMessage(myID,spyText,{parse_mode:'Markdown'}); 
-      }
-    */
-
-    /*if(text == '/myID')
-    {
-      bot.sendMessage(chatId, ''+chatId);
-    }*/
 
     if(text == '/adminsend')
     {

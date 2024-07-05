@@ -14,7 +14,7 @@ var attention = Array();
 var modeSendGroup = false;
 
 var showMessage = false;
-const chatGroup = '-1001808288200';
+const chatGroup = '-1002162821222';
 const chatGroupGareg = '-1002215788892';
 const chatGroupEquipp = '-1002103477991';
 const chatGroupPLKA = '-1001606164544';
@@ -24,7 +24,7 @@ const chatGroupMarader = '-1001346605280';
 const chatGroupEllesar = '-1001546582023';
 const chatGroupPiyPiy = '-1001903249049';
 
-const papisdetiGroup = '-1001949452095';
+const papisdetiGroup = '-1002132804742';
 
 var kmToday;
 
@@ -508,7 +508,7 @@ bot.on('message', msg => {
 
     if((text == firstStart)||(text == firstStart+nameBot))
     {
-      bot.sendMessage(chatId,'*Тебя приветствует чат бот, который отслеживает КМы для пачки Huligans Emperes клана.* \n Для получение информации о КМах используй комманду /sbor',{parse_mode:'Markdown'});
+      bot.sendMessage(chatId,'*Тебя приветствует чат бот, который отслеживает КМы для пачки Болгары ТМ Emperes клана.* \n Для получение информации о КМах используй комманду /sbor',{parse_mode:'Markdown'});
     }
 
     if((text == showAllKM)||(text == showAllKM+nameBot))
@@ -520,10 +520,10 @@ bot.on('message', msg => {
     if (modeSendGroup)
     {
       modeSendGroup = false;
-      bot.sendMessage(chatId,'Сообщение успешно переслано в группу еквипеда',{parse_mode:'Markdown'});
+      bot.sendMessage(chatId,'Сообщение успешно переслано в группу болгар',{parse_mode:'Markdown'});
       //bot.sendMessage(chatGroup,text,{parse_mode:'Markdown'});
       //bot.sendMessage(chatGroupEquipp,text,{parse_mode:'Markdown'});
-      bot.sendMessage(chatGroupGareg,text,{parse_mode:'Markdown'});
+      bot.sendMessage(papisdetiGroup,text,{parse_mode:'Markdown'});
       bot.sendMessage(chatId,text,{parse_mode:'Markdown'});
     }
  
@@ -531,7 +531,7 @@ bot.on('message', msg => {
     if(text == '/adminsend')
     {
       modeSendGroup = true;
-      bot.sendMessage(chatId,'Режим отправки в группу включен следующий текст перешлет ваш текст в группу еквипеда',{parse_mode:'Markdown'});
+      bot.sendMessage(chatId,'Режим отправки в группу включен следующий текст перешлет ваш текст в группу болгары',{parse_mode:'Markdown'});
     } 
     
 })

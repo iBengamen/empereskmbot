@@ -1,0 +1,39 @@
+[telegram]
+token_env = "TELEGRAM_TOKEN"
+
+[feeds]
+boss = "https://asterios.tm/index.php?cmd=rss&serv=0&filter=epic&count=100&out=xml"
+siege = "https://asterios.tm/index.php?cmd=rss&serv=0&filter=siege&out=xml"
+tw = "https://asterios.tm/index.php?cmd=rss&serv=0&filter=tw&out=xml"
+
+[chats]
+info_groups = [
+  -1002162821222,
+  -1002103477991,
+  -1002215788892,
+  -1001606164544,
+  -1001733456948,
+  -1001689595930,
+  -1001346605280,
+  -1001546582023,
+  -1001903249049,
+]
+reminder_groups = [
+  -1002103477991,
+  -1002215788892,
+  -1001606164544,
+  -1001733456948,
+  -1001689595930,
+  -1001346605280,
+  -1001546582023,
+  -1001903249049,
+]
+admin_forward_chat = -1002132804742
+
+[notifications]
+reminder_template = "Напоминание, красавчики: {km_today}"
+no_events_text = "Нет КМов, отдыхайте друзья"
+day_names = ["(ПН)", "(ВТ)", "(СР)", "(ЧТ)", "(ПТ)", "(СБ)", "(ВС)"]
+
+[storage]
+state_path = "data/state.json"

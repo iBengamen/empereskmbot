@@ -1,3 +1,11 @@
-/.vscode
+﻿/.vscode
 /node_modules
 .bd
+__pycache__/
+*.py[cod]
+*.log
+.env
+config.toml
+data/
+.venv/
+

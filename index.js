@@ -429,7 +429,7 @@ function checkKMforFuture(days = 30)
      
       var sndMsg = ''; 
       sndMsg += '\n \n'+'*Сегодня у нас:* \n'+ kmToday;
-      sndMsg += arrToStr(arrKM, days);
+      sndMsg += '\n \n'+ arrToStr(arrKM, days);
 
       return sndMsg;
 }

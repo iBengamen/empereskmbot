@@ -26,7 +26,7 @@ const chatGroupMarader = '-1001346605280';
 const chatGroupEllesar = '-1001546582023';
 const chatGroupPiyPiy = '-1001903249049';
 
-const papisdetiGroup = '-1002132804742';
+const papisdetiGroup = '-1002285638981';
 
 var kmToday;
 
